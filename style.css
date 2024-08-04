@@ -1,0 +1,198 @@
+@font-face {
+  font-family: mainFont;
+  src: url(Fonts/Main-font.ttf);
+}
+
+@font-face {
+  font-family: secondFont;
+  src: url(Fonts/Second-font.ttf);
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+.mainFont{
+  font-family: mainFont;
+}
+.secondFont{
+  font-family: secondFont;
+}
+.home-top-part {
+  font-family: "mainfont";
+}
+
+.top-top-nav {
+  font-family: "mainfont";
+}
+
+.pages:hover .pageInner {
+  display: block;
+  background-color: rgb(241 245 249);
+}
+
+.pages {
+  font-family: "mainFont";
+  font-weight: 400;
+}
+
+.overlay {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 34;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(255, 255, 255, 0.932);
+}
+
+.overlay-content {
+  position: relative;
+
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay-content input {
+  outline: #222;
+  background-image: url(/Image/hero-inner-image.jpg);
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.overlay .closebtn:hover {
+  color: #7c7c7c;
+}
+
+.overlay input[type="text"] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+  border: 1px solid #000000;
+}
+
+.overlay-content input:hover {
+  border: 1px solid #ffb700;
+}
+
+.overlay button {
+  width: 20%;
+  padding: 15px;
+  background: #000000;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.overlay button:hover {
+  background: #ffb700;
+}
+
+.swiper-slide {
+  font-family: "mainfont";
+}
+.heading {
+  font-family: "mainfont";
+}
+.heading samp,
+.heading button {
+  font-family: "mainfont";
+}
+.hero-product-list h3 {
+  font-family: "mainfont";
+  font-size: 18px;
+  font-weight: 400;
+  color: #6a6a6a;
+}
+.hero-product-list h4 {
+  font-family: "mainfont";
+  font-size: 18px;
+  font-weight: 500;
+}
+.cardTab{
+  font-family: mainFont;
+}
+.card-titel {
+  font-family: mainFont;
+}
+.item-cart-contenar {
+  font-family: mainFont;
+}
+.items {
+  display: grid;
+  grid-template-columns: 70px 1fr 70px;
+  padding: 20px 0px;
+}
+.list-items::-webkit-scrollbar {
+  width: 0;
+}
+
+.container {
+  font-family: mainFont;
+}
+.menu{
+  font-family:mainFont;
+}
+
+.title{
+  font-family: secondFont;
+}
+
+.subtitle{
+  color: #6a6a6a;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  font-family: mainFont;
+}
+.animation{
+  animation-name:scroll ;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll{
+  from{
+transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+
+
+#loader {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(147, 150, 150);
+  z-index: 99;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+
+}
+
+#loader h1 {
+  font-size: 100px;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+
+}

@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Link Tailwind CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Link Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Title -->
+  <title>Gearo</title>
+  <!-- Link Favicon -->
+  <link rel="shortcut icon" href="Icon/favicon.png" type="image/x-icon">
+  <!-- Link icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body >
+  <!-- Top top heard -->
+  <div
+    class="top-top-nav h-14 w-full hidden bg-[#222222] md:flex  items-center justify-between px-4 text-[18px] font-[400] font-mainFont">
+    <a href="#" class="flex gap-2">
+      <img src="Icon/gift.svg" alt="">
+      <div class="text font-mainFont text-white">Gift vouchers</div>
+    </a>
+
+    <div class="top-nav-bar-right md:flex  items-center justify-between gap-4 text-[18px] font-[400]">
+      <a href="#" class="flex gap-2">
+        <img src="Icon/phone-icon.svg" alt="">
+        <div class="text font-mainFont hover:underline hover:decoration-[#FFB700] text-white">+124 444 55</div>
+
+      </a>
+      <a href="#" class="flex gap-2">
+        <img src="Icon/email-icon.svg" alt="">
+        <div class="text font-mainFont hover:underline hover:decoration-[#FFB700] text-white">hello@gmail.com</div>
+
+      </a>
+    </div>
+  </div>
+
+
+  <!-- top part of home section -->
+  <div class="home-top-part flex  ">
+    <!-- NavBar -->
+    <div class="navbar  w-1/2  h-[70px] flex items-center justify-between text-black px-4  bg-[#FFFFFF]">
+      <div class="logo">
+        <a href="/index.html">
+          <img class="w-32" src="Logo/ecbc_gearo-logo.svg" alt="">
+        </a>
+      </div>
+      <div class="nav py-2 px-4 font-medium text-[18px] md:py-4 md:px-6 gap-4 hidden  lg:flex ">
+        <a class=" hover:text-[#FFB700] " href="index.html">Home</a>
+        <a class=" hover:text-[#FFB700] " href="about.html">About US</a>
+        <div class="pages  relative text-center  z-10">
+          <button class="dropbtn nav ">Page's </button>
+          <div class="pageInner absolute hidden border-[1px] border-solid   min-w-48 z-[1]">
+            <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="index.html">Home</a>
+            <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="about.html">About US</a>
+            <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="FAQg.html">FAQg</a>
+            <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="privacyPolicy.html">privacy
+              Policy</a>
+            <a class=" hover:text-[#FFB700] text-center py-2  hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="blog.html">Blog</a>
+            <a class=" hover:text-[#FFB700] text-center py-2  hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="contact.html">Contact</a>
+          </div>
+        </div>
+        <a class=" hover:text-[#FFB700] mx-2" href="blog.html">Blog</a>
+        <a class=" hover:text-[#FFB700] mx-2" href="contact.html">Contact</a>
+      </div>
+
+    </div>
+    <div class="nav-right  w-1/2 h-[70px] flex gap-4 bg-white items-center justify-end text-black px-4   ">
+      <div class="pages lg:flex hidden  gap-3 relative text-center p-[10px] bg-[#F6F6F6] min-w-40 z-10">
+        <img src="/Icon/category-icon.svg" alt="">
+        <button class="dropbtn hover:block   ">All categories </button>
+        <div class="pageInner absolute  hidden bg-[#F6F6F6] -ml-[10px] mt-6 w-full z-[1]">
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Carpenter tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Painting tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Power tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Hand tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Plumbing tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Flathead tool</a>
+        </div>
+      </div>
+
+      <div class="nav-right-right flex ">
+        <!-- search bar -->
+        <div id="myOverlay" class="overlay  hidden">
+          <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+          <h1 class="text-5xl text-black text-center">Search Here</h1>
+          <div class="overlay-content flex flex-col items-center gap-5">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit" class="">Search</button>
+          </div>
+        </div>
+        <img src="Icon/65fe8358f0132ba5bcebf0a0_search-magnifier-dark.svg" onclick="openSearch()"
+          class="hidden md:block" alt="">
+        <img src="Icon/cart-white-icon.svg" alt="">
+
+        <!-- Add to card -->
+        <div class="card flex  py-2 px-4 gap-2 items-center bg-[#222]">
+          <i class="ri-shopping-bag-line text-xl text-white"></i>
+          <h4 class="Card-count text-xs text-center w-4 h-4 bg-white rounded-[50%] text-black">0</h4>
+        </div>
+
+        <!-- menu -->
+        <div
+          class="menu flex h-full w-full md:hidden lg:hidden items-center justify-center relative text-center z-10 ml-2 border-2 border-[#F6F6F6]">
+          <i class="ri-menu-fill menu-icon text-xl py-2 px-4 bg-[#222] text-white cursor-pointer"></i>
+          <div
+            class="menuInner hidden absolute min-w-[100vw] top-1/2 left-1/2 -translate-x-[92%] translate-y-[13%] bg-white">
+            <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium  block"
+              href="#">Home</a>
+            <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+              href="#">About US</a>
+            <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+              href="#">Shop</a>
+            <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+              href="#">FAQ</a>
+            <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+              href="#">Privacy Policy</a>
+            <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+              href="#">Blog</a>
+            <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+              href="#">Contact</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--  hero section  -->
+  <div class="hero-bottom-part mt-12  w-full md:mb-10">
+
+    <div
+      class="h-[100vh] w-[50vw] md:w-[35vw] absolute top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 left-1/2  bg-[#F6F6F6]">
+    </div>
+    <div class="swiper mySwiper ">
+
+      <div class="swiper-wrapper w-full h-full">
+        <!-- page1 -->
+        <div class="swiper-slide flex  flex-col ">
+          <div class="container mx-auto p-4 md:h-[100vh]">
+            <div class="heading flex justify-center flex-col items-center mb-12">
+              <h1 class="text-[10vw] font-semibold  mb-4 lg:text-[8.5vw] ">
+                POWER TOOL
+              </h1>
+              <div
+                class="md:absolute bottom-0 md:px-4 left-0 flex justify-center items-center md:justify-start md:items-start flex-col md:w-[30%] ">
+
+                <h3 class="md:text-3xl text-[24px] text-center md:text-start font-semibold mb-9">Ingco power tools and
+                  hand tools cordless
+
+                </h3>
+                <h4 class="text-[22px] font-semibold mb-4 text-center md: ">$ 1,245.00 USD
+                  <samp class="line-through md:inline   block text-lg font-normal text-[#6a6a6a] ">
+                    $ 1,420.00 USD</samp>
+                </h4>
+                <button
+                  class="px-[15px] py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black">Add
+                  to
+                  Cart</button>
+              </div>
+            </div>
+            <div
+              class="img-box   flex justify-center items-center md:absolute md:top-[59%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2  ">
+
+              <img class="md:h-[35vw] h-[73vw]  md:rotate-[29deg]" src="/Image/swiper-page1-img.png" alt="">
+            </div>
+            <div class="container mx-auto p-4">
+              <!-- hero-product-seation -->
+              <div
+                class="md:absolute bottom-0 md:px-4 -right-20 flex justify-center items-center md:justify-start md:items-start flex-col md:w-[30%] ">
+                <!-- hero-product-description -->
+                <h3 class="md:text-lg text-lg text-center md:text-start font-normal w-[80.666667%] mb-9">Explore the
+                  art of
+                  creation with confidence, equipped with the finest tools and accessories handpicked for the. and
+                  hand tools cordless
+
+                </h3>
+                <!-- hero-product-list-wrap -->
+                <div class="hero-product-list-wrap md:w-3/4  mb-6 ">
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Product type:</h3>
+                    <h4>Rotary drill</h4>
+                  </div>
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Chuck Capacity</h3>
+                    <h4>0-6.5mm</h4>
+                  </div>
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Power Output</h3>
+                    <h4>450 W</h4>
+                  </div>
+
+                </div>
+                <!-- hero-product-button -->
+                <button
+                  class="px-[15px] py-[12px] text-center text-lg font-medium   hover:bg-[#FFB700] hover:text-black transition bg-black text-white">View
+                  more details</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- page2 -->
+        <div class="swiper-slide flex  flex-col ">
+          <div class="container mx-auto p-4 md:h-[100vh]">
+            <div class="heading flex justify-center flex-col items-center mb-12">
+              <h1 class="text-[10vw] font-semibold  mb-4 lg:text-[8.5vw] ">
+                PLUMBING TOOL
+              </h1>
+              <div
+                class="md:absolute bottom-0 md:px-4 left-0 flex justify-center items-center md:justify-start md:items-start flex-col md:w-[30%] ">
+
+                <h3 class="md:text-3xl text-[24px] text-center md:text-start font-semibold mb-9">Corded electric
+                  rotary machine
+
+                </h3>
+                <h4 class="text-[22px] font-semibold mb-4 text-center md: ">$ 189.00 USD
+                  <samp class="line-through md:inline   block text-lg font-normal text-[#6a6a6a] ">
+                    $ 230.00 USD</samp>
+                </h4>
+                <button
+                  class="px-[15px] py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black">Add
+                  to
+                  Cart</button>
+              </div>
+            </div>
+            <div
+              class="img-box   flex justify-center items-center md:absolute md:top-[50%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2  ">
+
+              <img class="md:h-[30vw] h-[73vw]  md:rotate-[-8deg]" src="/Image/swiper-page2-img.png" alt="">
+            </div>
+            <div class="container mx-auto p-4">
+              <!-- hero-product-seation -->
+
+              <div
+                class="md:absolute bottom-0 md:px-4 -right-20 flex justify-center items-center md:justify-start md:items-start flex-col md:w-[30%] ">
+                <!-- hero-product-description -->
+                <h3 class="md:text-lg text-lg text-center md:text-start font-normal w-[80.666667%] mb-9">Explore the
+                  art of
+                  continuous power supply, eliminating the need for batteries or recharging.
+
+                </h3>
+                <!-- hero-product-list-wrap -->
+                <div class="hero-product-list-wrap md:w-3/4  mb-6 ">
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Product type:</h3>
+                    <h4>lubrication</h4>
+                  </div>
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Chuck Capacity</h3>
+                    <h4>0-3.5mm</h4>
+                  </div>
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Power Output</h3>
+                    <h4>160 W</h4>
+                  </div>
+
+                </div>
+                <!-- hero-product-button -->
+                <button
+                  class="px-[15px] py-[12px] text-center text-lg font-medium   hover:bg-[#FFB700] hover:text-black transition bg-black text-white">View
+                  more details</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- page3 -->
+        <div class="swiper-slide flex  flex-col ">
+          <div class="container mx-auto p-4 md:h-[100vh]">
+            <div class="heading flex justify-center flex-col items-center mb-12">
+              <h1 class="text-[10vw] font-semibold  mb-4 lg:text-[8.5vw] ">
+                FLATHEAD TOOL
+              </h1>
+              <div
+                class="md:absolute bottom-0 md:px-4 left-0 flex justify-center items-center md:justify-start md:items-start flex-col md:w-[30%] ">
+
+                <h3 class="md:text-3xl text-[24px] text-center md:text-start font-semibold mb-9">YATO electrician
+                  motor cutter
+
+                </h3>
+                <h4 class="text-[22px] font-semibold mb-4 text-center md: ">$ 1,209.00 USD
+                  <samp class="line-through md:inline   block text-lg font-normal text-[#6a6a6a] ">
+                    $ 1,500.00 USD</samp>
+                </h4>
+                <button
+                  class="px-[15px] py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black">Add
+                  to
+                  Cart</button>
+              </div>
+            </div>
+            <div
+              class="img-box   flex justify-center items-center md:absolute md:top-[59%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2  ">
+
+              <img class="md:h-[40vw] h-[73vw]  md:rotate-[-46deg]" src="/Image/swiper-page3-img.png" alt="">
+            </div>
+            <div class="container mx-auto p-4">
+              <!-- hero-product-seation -->
+
+              <div
+                class="md:absolute bottom-0 md:px-4 -right-20 flex justify-center items-center md:justify-start md:items-start flex-col md:w-[30%] ">
+                <!-- hero-product-description -->
+                <h3 class="md:text-lg text-lg text-center md:text-start font-normal w-[80.666667%] mb-9">Explore the
+                  art of
+                  electricians and professionals working with electrical installations.
+
+                </h3>
+                <!-- hero-product-list-wrap -->
+                <div class="hero-product-list-wrap md:w-3/4  mb-6 ">
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Product type:</h3>
+                    <h4>Wire Cutter</h4>
+                  </div>
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Chuck Capacity</h3>
+                    <h4>Diameter</h4>
+                  </div>
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Power Output</h3>
+                    <h4>184 W</h4>
+                  </div>
+
+                </div>
+                <!-- hero-product-button -->
+                <button
+                  class="px-[15px] py-[12px] text-center text-lg font-medium   hover:bg-[#FFB700] hover:text-black transition bg-black text-white">View
+                  more details</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- page4 -->
+        <div class="swiper-slide flex  flex-col ">
+          <div class="container mx-auto p-4 md:h-[100vh]">
+            <div class="heading flex justify-center flex-col items-center mb-12">
+              <h1 class="text-[10vw] font-semibold  mb-4 lg:text-[8.5vw] ">
+                HAND TOOL
+              </h1>
+              <div
+                class="md:absolute bottom-0 md:px-4 left-0 flex justify-center items-center md:justify-start md:items-start flex-col md:w-[30%] ">
+
+                <h3 class="md:text-3xl text-[24px] text-center md:text-start font-semibold mb-9">Ratchet spanner and
+                  faced hammer
+
+                </h3>
+                <h4 class="text-[22px] font-semibold mb-4 text-center md: ">$ 240.00 USD
+                  <samp class="line-through md:inline   block text-lg font-normal text-[#6a6a6a] ">
+                    $ 430.00 USD</samp>
+                </h4>
+                <button
+                  class="px-[15px] py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black">Add
+                  to
+                  Cart</button>
+              </div>
+            </div>
+            <div
+              class="img-box   flex justify-center items-center md:absolute md:top-[59%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2  ">
+
+              <img class="md:h-[42vw] h-[73vw]  md:rotate-[7deg]" src="/Image/swiper-page4-img.png" alt="">
+            </div>
+            <div class="container mx-auto p-4">
+              <!-- hero-product-seation -->
+
+              <div
+                class="md:absolute bottom-0 md:px-4 -right-20 flex justify-center items-center md:justify-start md:items-start flex-col md:w-[30%] ">
+                <!-- hero-product-description -->
+                <h3 class="md:text-lg text-lg text-center md:text-start font-normal w-[80.666667%] mb-9"> Depending on
+                  the
+                  model, faced hammers come with changeable faces of different hardness or materials for tasks.
+
+                </h3>
+                <!-- hero-product-list-wrap -->
+                <div class="hero-product-list-wrap md:w-3/4  mb-6 ">
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Product type:</h3>
+                    <h4>Hard faces</h4>
+                  </div>
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Chuck Capacity</h3>
+                    <h4>Nuts & bolts</h4>
+                  </div>
+                  <div class="hero-product-list flex gap-3 md:justify-between">
+                    <h3>Power Output</h3>
+                    <h4>175 W</h4>
+                  </div>
+
+                </div>
+                <!-- hero-product-button -->
+                <button
+                  class="px-[15px] py-[12px] text-center text-lg font-medium   hover:bg-[#FFB700] hover:text-black transition bg-black text-white">View
+                  more details</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <!-- product-section -->
+  <div class="product-section-wraper md:w-full lg:w-full mt-24 ">
+    <div class="container h-full min-w-full  bg-white  ">
+      <div class="product-title flex justify-center items-center md:mb-5">
+        <h2 class="md:text-[48px] lg:text-[60px] text-3xl text-center justify-center font-semibold ">New arrival
+          products</h2>
+      </div>
+      <div class="item-container-part1 md:flex-wrap md:justify-center md:items-center py-7 px-6 md:flex md:gap-6 md:px-6 md:mb-10">
+
+        <div class="item-box md:w-[289px] md:h-[289px] flex mb-12 flex-col relative group">
+        </div>
+        <!-- <div class="item1  md:w-[289px] md:h-[289px] flex mb-7 flex-col relative group ">
+          <div
+            class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+            <button
+              class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black"><a
+                href="#">
+                Shop Now
+              </a></button>
+          </div>
+          <img class="h-full w-full object-cover object-center" src="/Image/product-image-01-p-500.jpg" alt="">
+
+          <h3 class=" text-xl font-semibold text-left   "> tools wood cutter</h3>
+          <h4 class="text-lg font-medium text-left  ">$ 1,245.00 USD
+            <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a] ">
+              $ 1,420.00 USD</samp>
+          </h4>
+
+        </div> -->
+        <!-- <div class="item2  md:w-[289px] md:h-[289px] flex mb-7 flex-col relative group">
+          <div
+            class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+            <button
+              class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black"><a
+                href="#">
+                Shop Now
+              </a></button>
+          </div>
+          <img class="h-full w-full object-cover object-center" src="/Image/product-image-02-p-500.jpg" alt="">
+
+          <h3 class=" text-xl font-semibold text-left   ">New tools wood cutter</h3>
+          <h4 class="text-lg font-medium text-left  ">$ 1,245.00 USD
+            <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a] ">
+              $ 1,420.00 USD</samp>
+          </h4>
+
+        </div>
+        <div class="item3  md:w-[289px] md:h-[289px] flex mb-7 flex-col relative group ">
+          <div
+            class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+            <button
+              class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black"><a
+                href="#">
+                Shop Now
+              </a></button>
+          </div>
+          <img class="h-full w-full object-cover object-center" src="/Image/product-image-03-p-500.jpg" alt="">
+          <h3 class=" text-xl font-semibold text-left   ">New tools wood cutter</h3>
+          <h4 class="text-lg font-medium text-left  ">$ 1,245.00 USD
+            <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a] ">
+              $ 1,420.00 USD</samp>
+          </h4>
+
+        </div>
+        <div class="item4 md:w-[289px] md:h-[289px] flex mb-7 flex-col relative group">
+          <div
+            class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+            <button
+              class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black"><a
+                href="#">
+                Shop Now
+              </a></button>
+          </div>
+          <img class="h-full w-full object-cover object-center" src="/Image/product-image-04-p-500.jpg" alt="">
+          <h3 class="text-xl font-semibold text-left mt-2">New tools wood cutter</h3>
+          <h4 class="text-lg font-medium text-left">
+            $ 1,245.00 USD
+            <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a]">$ 1,420.00 USD</samp>
+          </h4>
+        </div> -->
+
+
+
+      </div>
+      <!-- <div class="item-container-part2 w-full h-full py-7 px-6 md:flex gap-12 md:px-6">
+
+        <div class="left-sidew-full  md:w-1/2 h-full  grid grid-rows-1 gap-12 md:grid-cols-2 md:gap-12">
+
+
+          <div class="item  md:w-[289px] md:h-[289px] flex mb-7  flex-col relative group ">
+            <div
+              class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+              <button
+                class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black"><a
+                  href="#">
+                  Shop Now
+                </a></button>
+            </div>
+            <img class="h-full w-full object-cover object-center" src="/Image/product-image-05-p-500.jpg" alt="">
+
+            <h3 class=" text-xl font-semibold text-left   ">New tools wood cutter</h3>
+            <h4 class="text-lg font-medium text-left  ">$ 1,245.00 USD
+              <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a] ">
+                $ 1,420.00 USD</samp>
+            </h4>
+
+          </div>
+          <div class="item2  md:w-[289px] md:h-[289px] flex mb-7  flex-col relative group ">
+            <div
+              class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+              <button
+                class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black"><a
+                  href="#">
+                  Shop Now
+                </a></button>
+            </div>
+            <img class="h-full w-full object-cover object-center" src="/Image/product-image-13-p-500.jpg" alt="">
+            <h3 class=" text-xl font-semibold text-left   ">New tools wood cutter</h3>
+            <h4 class="text-lg font-medium text-left  ">$ 1,245.00 USD
+              <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a] ">
+                $ 1,420.00 USD</samp>
+            </h4>
+
+          </div>
+          <div class="item3  md:w-[289px] md:h-[289px] flex mb-7  flex-col relative group  ">
+            <div
+              class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+              <button
+                class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black"><a
+                  href="#">
+                  Shop Now
+                </a></button>
+            </div>
+            <img class="h-full w-full object-cover object-center" src="/Image/product-image-14-p-500.jpg" alt="">
+
+            <h3 class=" text-xl font-semibold text-left   ">New tools wood cutter</h3>
+            <h4 class="text-lg font-medium text-left  ">$ 1,245.00 USD
+
+            </h4>
+
+          </div>
+          <div class="item4  md:w-[289px] md:h-[289px] flex mb-7  flex-col relative group">
+            <div
+              class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+              <button
+                class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black"><a
+                  href="#">
+                  Shop Now
+                </a></button>
+            </div>
+            <img class="h-full w-full object-cover object-center" src="/Image/product-image-15-p-500.jpg" alt="">
+
+            <h3 class=" text-xl font-semibold text-left   ">New tools wood cutter</h3>
+            <h4 class="text-lg font-medium text-left  ">$ 1,245.00 USD
+
+            </h4>
+
+          </div>
+        </div>
+        <div class="right-side md:w-1/2 ">
+          <div
+            class="item bg-[url('/Image/right-side.jpg')]  bg-slate-50 bg-cover bg-center bg-no-repeat  w-full md:h-full h-[100vh] flex flex-col px-5 py-4">
+            <h3 class=" md:text-6xl text-3xl font-semibold text-left mb-6 text-white z-10 ">Hand tools and storage</h3>
+            <button
+              class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black">Shop
+              now</button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    </div>
+  </div>
+
+  <!-- Add to card-->
+  <div
+    class="cardTab  hidden md:w-[400px] w-full z-30 bg-white text-black fixed flex-col justify-between right-0 top-0 bottom-0">
+    <div class="card-title flex border-b h-14 justify-between items-center">
+      <h1 class="p-5 m-0 font-semibold text-[28px]">Your Cart</h1>
+      <i class="ri-close-fill card-close font-semibold text-[28px]"></i>
+    </div>
+    <div class="list-items flex-grow overflow-auto h-[calc(100vh-160px)]">
+      <!-- <div class="items items-center text-center text-black w-full">
+        <div class="img w-14 h-14 object-cover object-center">
+          <img src="/Image/product-image-01-p-500.jpg" class="w-14 h-14 object-cover object-center" alt="">
+        </div>
+        <div class="info flex">
+          <span class="text-left">Lorem ipsum, dolor sit amet consectetur </span>
+        </div>
+        <div class="quantity text-center cursor-pointer">
+          <span class="inline-block bg-black w-[25px] h-[25px] rounded-full text-white text-center"> <</span>
+              <span class="text-black font-normal ">0</span>
+              <span class="inline-block bg-black w-6 h-6 rounded-full text-white text-center">></span>
+        </div>
+        <div class=""></div>
+        <div class="remove-price">
+          <h4 class="text-left font-normal">$ 1,245.00 USD</h4>
+          <h3 class="text-left font-normal hover:text-[#FFB700] underline">Remove</h3>
+        </div>
+      </div> -->
+
+    </div>
+    <div class="btn absolute bottom-0 min-h-32 w-full flex items-center flex-col bg-slate-300">
+      <div class="Amt-total w-full px-5 py-4 flex items-center justify-between">
+        <h4>Subtotal</h4>
+        <h4>0</h4>
+      </div>
+      <button
+        class="checkOut text-center w-full px-5 py-4 mb-5 hover:bg-[#FFB700] transition-colors bg-black text-white hover:text-black">
+        <a href="">Continue
+          to Checkout</a></button>
+      <button
+        class="checkOut w-full px-5 py-4 hover:bg-[#FFB700] transition-colors bg-black text-white hover:text-black hidden">Checkout
+        is disabled on this site.</button>
+    </div>
+  </div>
+
+  <!--sale section with about section   -->
+  <div class="flex flex-col lg:flex-row h-full w-full py-7 px-6">
+    <div class="relative lg:w-1/2 h-[100vh] overflow-hidden">
+      <img src="/Image/about-image-01.jpg" alt="Tools" class=" w-full h-full object-cover" />
+
+    <marquee class="absolute  md:top-24 top-1 -left-11 md:-left-24 md:w-[60vw] w-[100vw] rotate-[330deg] bg-white text-black py-4 px-4 rounded-lg shadow-lg text-xl font-semibold  " behavior="right" direction="" loop="-1">
+
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+      Free shipping on orders over <span class="text-yellow-500 mr-4">$150</span>
+    </marquee>
+    </div>
+    <div class="bg-zinc-900 text-white md:p-11 p-3 lg:w-1/2 flex flex-col justify-around ">
+      <h2 class="md:text-5xl text-[28px] leading-9  font-semibold mb-4 md:leading-[62px] ">Our craftsmanship journey</h2>
+      <p class="mb-6 font-normal text-lg">
+        At Gearo, we embark on a relentless pursuit of excellence, driven by a passion for
+        craftsmanship and innovation. Our story is woven with a commitment to providing artisans.
+      </p>
+      <button  class="px-[15px] py-[12px] text-center text-lg font-medium hover:bg-white hover:text-black transition bg-[#FFB700] text-black w-52">Know more about us</button>
+      <div class="md:flex md:space-x-8 justify-end">
+        <div class="md:text-center text-start">
+          <p class="text-6xl font-semibold">30</p>
+          <p>Total tools</p>
+        </div>
+        <div class="md:text-center text-start">
+          <p class="text-6xl font-semibold">350<span class="text-yellow-500  font-normal">+</span></p>
+          <p>Happy customers</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ccustomer care section  -->
+  <div class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div>
+          <img src="/Icon/feature-icon-01.svg" alt="Free shipping" class="mx-auto mb-4" />
+          <h3 class="text-2xl font-semibold text-zinc-900 ">Free shipping</h3>
+          <p class="text-zinc-600 text-lg font-normal">
+            Enjoy the convenience of free shipment on all your orders.
+          </p>
+        </div>
+        <div>
+          <img src="/Icon/feature-icon-02.svg" alt="Easy refund" class="mx-auto mb-4 text-white" />
+          <h3 class="text-2xl font-semibold text-zinc-900 ">Easy refund</h3>
+          <p class="text-zinc-600  text-lg font-normal">
+            Shop with confidence that our easy refund policy has got you covered.
+          </p>
+        </div>
+        <div>
+          <img src="/Icon/feature-icon-03.svg" alt="Online support" class="mx-auto mb-4" />
+          <h3 class="text-2xl font-semibold text-zinc-900 ">Online support</h3>
+          <p class="text-zinc-600  text-lg font-normal">
+            Our dedicated online support team is just a click away.
+          </p>
+        </div>
+        <div>
+          <img src="/Icon/feature-icon-04.svg" alt="Flexible payment" class="mx-auto mb-4" />
+          <h3 class="text-2xl font-semibold text-zinc-900">Flexible payment</h3>
+          <p class="text-zinc-600 text-lg font-normal">
+            We understand that flexibility is key when it comes to payments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Reviwe Section -->
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-4xl md:text-[54px] md:leading-[70px] font-semibold text-black text-center">
+    What our clients say
+  </h2>
+  <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#F6F6F6] p-6 rounded-lg shadow">
+      <div class="flex items-center mb-4">
+        <img class="w-12 h-12 rounded-full" src="Image/testimonial-image-01.png" alt="Emma Watson" />
+        <div class="ml-4">
+          <h3 class="text-xl md:text-2xl font-semibold text-zinc-900 ">Emma Watson</h3>
+          <p class="text-zinc-600 text-lg font-normal md:text-lg ">Co-Founder</p>
+        </div>
+      </div>
+      <p class="text-zinc-700 text-base md:text-lg font-normal">
+        Our partnership with Gearo has been a key factor in our growth. Their commitment to
+        excellence aligns perfectly with our values, and it reflects in the success.
+      </p>
+    </div>
+    <div class="bg-[#F6F6F6] p-6 rounded-lg shadow">
+      <div class="flex items-center mb-4">
+        <img
+          class="w-12 h-12 rounded-full"
+          src="Image/testimonial-image-02.png"
+          alt="Louis Ferguson"
+        />
+        <div class="ml-4">
+          <h3 class="text-xl md:text-2xl font-semibold text-zinc-900">Louis Ferguson</h3>
+          <p class="text-zinc-600 text-lg font-normal md:text-lg ">Web Developer</p>
+        </div>
+      </div>
+      <p class="text-zinc-700 text-base md:text-lg font-normal">
+        Our passion for customer excellence is just one reason why we are the market leader. We've
+        always worked very hard to give our customers the best experience.
+      </p>
+    </div>
+    <div class="bg-[#F6F6F6] p-6 rounded-lg shadow">
+      <div class="flex items-center mb-4">
+        <img
+          class="w-12 h-12 rounded-full"
+          src="Image/testimonial-image-03.png"
+          alt="Samuel Bishop"
+        />
+        <div class="ml-4">
+          <h3 class="text-xl md:text-2xl font-semibold text-zinc-900">Samuel Bishop</h3>
+          <p class="text-zinc-600 text-lg font-normal md:text-lg ">CEO of Blogzine</p>
+        </div>
+      </div>
+      <p class="text-zinc-700 text-base md:text-lg font-normal">
+        Two before narrow not relied on how except moment myself Dejection assurance Mrs led
+        certainly So gate at no only none open Betrayed.
+      </p>
+    </div>
+    <div class="bg-[#F6F6F6] p-6 rounded-lg shadow">
+      <div class="flex items-center mb-4">
+        <img
+          class="w-12 h-12 rounded-full"
+          src="Image/testimonial-image-04.png"
+          alt="Jacqueline Miller"
+        />
+        <div class="ml-4">
+          <h3 class="text-xl md:text-2xl font-semibold text-zinc-900">Jacqueline Miller</h3>
+          <p class="text-zinc-600 text-lg font-normal md:text-lg ">Director</p>
+        </div>
+      </div>
+      <p class="text-zinc-700 text-base md:text-lg font-normal">
+        Was out laughter raptures returned outweigh. Luckily cheered Colonel I do we attack highest
+        enabled. Tried law yet style child. The bore of true of no be deal.
+      </p>
+    </div>
+    <div class="bg-[#F6F6F6] p-6 rounded-lg shadow">
+      <div class="flex items-center mb-4">
+        <img
+          class="w-12 h-12 rounded-full"
+          src="Image/testimonial-image-05.png"
+          alt="Carolyn Ortiz"
+        />
+        <div class="ml-4">
+          <h3 class="text-xl md:text-2xl font-semibold text-zinc-900">Carolyn Ortiz</h3>
+          <p class="text-zinc-600 text-lg font-normal md:text-lg">CEO</p>
+        </div>
+      </div>
+      <p class="text-zinc-700 text-base md:text-lg font-normal">
+        Had to return an item, and the process was smooth. The team promptly addressed my concerns,
+        and I got a refund without any hassle. I feel secure shopping on this.
+      </p>
+    </div>
+    <div class="bg-[#F6F6F6] p-6 rounded-lg shadow">
+      <div class="flex items-center mb-4">
+        <img class="w-12 h-12 rounded-full" src="Image/testimonial-image-06.png" alt="Lori Stevens" />
+        <div class="ml-4">
+          <h3 class="text-xl md:text-2xl font-semibold text-zinc-900">Lori Stevens</h3>
+          <p class="text-zinc-600 text-lg font-normal md:text-lg">Manager</p>
+        </div>
+      </div>
+      <p class="text-zinc-700 text-base md:text-lg font-normal">
+        In no impression, assistance contrasted Manners she wishing justice hastily new anxious At
+        discovery discourse departure objection we Few extensive adding.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Sela sction -->
+<div class="flex flex-col md:flex-row gap-4 p-4 ">
+  <div class="bg-zinc-900 text-white p-2 md:py-12 md:px-6 flex-1 h-[60vh] ">
+    <h2 class="text-yellow-500 text-lg font-semibold">BIG SALE</h2>
+    <h1 class="text-5xl md:text-2xl font-semibold mt-2">Spring into savings: shop our sale!</h1>
+    <p class="mt-4 text-lg font-normal">From: <span class="text-yellow-500 text-xl font-normal">20% off to 50% off</span></p>
+
+    <button  class="px-[15px] py-[12px] mt-6 text-center text-lg font-normal bg-white text-black transition hover:bg-[#FFB700]  w-52">Sale products</button>
+  </div>
+
+  <div class="bg-slate-300 text-zinc-900 text-center p-6 flex-1 bg-[url(/Image/offer--image-01.jpg)] bg-cover bg-center">
+    <h2 class="text-black text-2xl font-semibold ">
+      Flat <span class="text-yellow-500 text-2xl font-semibold">40% off</span> on the first order
+    </h2>
+    <h1 class="text-4xl font-semibold mt-2">GEARO bars tool</h1>
+    <button  class="px-[20px] py-[9px] mt-6 text-center text-lg font-normal bg-black text-white transition-colors hover:text-black hover:bg-[#FFB700]  ">Shop now</button>
+
+  </div>
+</div>
+<div class="  dark:bg-zinc-800  dark:text-zinc-300 py-8 px-4 md:h-[40vh] md:grid items-center">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 ">
+    <div class="flex items-center text-lg">
+
+      <img src="Logo/gearo-light-logo.svg" alt="Gear logo" class="mr-2 w-48" crossorigin="anonymous" />
+    </div>
+    <div class="flex items-baseline">
+      <img
+        src="/Icon/location.svg"
+        alt="Location icon"
+        class="mr-2"
+        crossorigin="anonymous"
+      />
+      <div>
+        <h3 class="font-semibold text-xl">Our location</h3>
+        <p class="font-light text-base">1421 Coburn Hollow Road<br />Metamora, Center Point, IL 61548.</p>
+      </div>
+    </div>
+    <div class="flex items-baseline">
+      <img src="/Icon/email-icon.svg" alt="Email icon" class="mr-2" crossorigin="anonymous" />
+      <div>
+        <h3 class="font-semibold text-xl">Email address</h3>
+        <p class="font-light text-base">hello@gmail.com</p>
+      </div>
+    </div>
+    <div class="flex items-baseline">
+      <img src="/Icon/phone-icon.svg" alt="Phone icon" class="mr-2" crossorigin="anonymous" />
+      <div>
+        <h3 class="font-semibold text-xl">Contact number</h3>
+        <p class="font-light text-base">+124 555 666, +99 548 666</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <!-- footer-top -->
+<div class="  dark:bg-zinc-800  dark:text-zinc-300 py-8 px-4 md:h-[40vh] md:grid items-center">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 ">
+      <div class="flex items-center text-lg">
+  
+        <img src="Logo/gearo-light-logo.svg" alt="Gear logo" class="mr-2 w-48" crossorigin="anonymous" />
+      </div>
+      <div class="flex items-baseline">
+        <img
+          src="/Icon/location.svg"
+          alt="Location icon"
+          class="mr-2"
+          crossorigin="anonymous"
+        />
+        <div>
+          <h3 class="font-semibold text-xl">Our location</h3>
+          <p class="font-light text-base">1421 Coburn Hollow Road<br />Metamora, Center Point, IL 61548.</p>
+        </div>
+      </div>
+      <div class="flex items-baseline">
+        <img src="/Icon/email-icon.svg" alt="Email icon" class="mr-2" crossorigin="anonymous" />
+        <div>
+          <h3 class="font-semibold text-xl">Email address</h3>
+          <p class="font-light text-base">hello@gmail.com</p>
+        </div>
+      </div>
+      <div class="flex items-baseline">
+        <img src="/Icon/phone-icon.svg" alt="Phone icon" class="mr-2" crossorigin="anonymous" />
+        <div>
+          <h3 class="font-semibold text-xl">Contact number</h3>
+          <p class="font-light text-base">+124 555 666, +99 548 666</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="bg-zinc-900 text-white py-10">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 px-4">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">About us</h3>
+          <p class="text-zinc-400 text-lg font-normal md:text-left">
+            At Gearo, we embark on a relentless pursuit of excellence, driven by a passion for
+            craftsmanship and innovation. Our story is woven with a commitment to providing artisans.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Pages</h3>
+          <ul class="text-zinc-400 space-y-2">
+            <a href="/index.html"><li class="hover:text-yellow-500 text-lg font-normal py-1">Home</li></a>
+            <a href="/about.html"><li class="hover:text-yellow-500 text-lg font-normal py-1">About Us</li></a>
+            <a href="/Shop.html"><li class="hover:text-yellow-500 text-lg font-normal py-1">Shop</li></a>
+            <a href="/FAQg.html"><li class="hover:text-yellow-500 text-lg font-normal py-1">FAQs</li></a>
+            <a href="blog.html"><li class="hover:text-yellow-500 text-lg font-normal py-1">Blog</li></a>
+            <a href="contact.html"><li class="hover:text-yellow-500 text-lg font-normal py-1">Contact Us</li></a>
+            <a href="privacyPolicy.html"><li class="hover:text-yellow-500 text-lg font-normal py-1">Privacy Policy</li></a>
+          </ul>
+        </div>
+       
+        <div class="col-span-2 lg:col-span-1">
+          <h3 class="text-xl font-semibold mb-4">Join our newsletter now</h3>
+          <div class="flex border border-zinc-700  focus:outline-none p-2">
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              class="p-2 w-full bg-transparent outline-none text-white "
+            />
+            <button class="hover:bg-white bg-yellow-500 focus:outline-none text-black p-2 transition ">Subscribe</button>
+          </div>
+          <h3 class="text-xl font-semibold mt-8 mb-4">Follow us on</h3>
+          <div class="flex space-x-4 text-zinc-400">
+    
+            <a href="#"><img aria-hidden="true" class="md:w-8 lg:w-24 w-8 " alt="instagram" src="/Icon/instagram.svg" /></a>
+            <a href="#"><img aria-hidden="true" class="md:w-8 lg:w-24 w-8 " alt="twitter" src="/Icon/twitter-x.svg" /></a>
+            <a href="#"><img aria-hidden="true" class="md:w-8 lg:w-24 w-8 " alt="linkedin" src="/Icon/linkedin.svg" /></a>
+            
+          <div class="hidden lg:block">
+            <img src="/Image/footer-vector.png" alt="hammer" class="w-full h-auto" />
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dev-name text-center bg-zinc-800 text-white py-3">
+      <h1>Designed by <span class="text-[#FFB700]">Webflow</span> Develop by <span class="text-[#FFB700]">Ashish Vishwakarma</span></h1>
+    </div>
+</div>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Script js link -->
+  <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Link Tailwind CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Link Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Title -->
+  <title>Gearo</title>
+  <!-- Link Favicon -->
+  <link rel="shortcut icon" href="Icon/favicon.png" type="image/x-icon">
+  <!-- Link icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body >
+  <!-- top part of home section -->
+  <div class="home-top-part flex  ">
+    <!-- NavBar -->
+    <div class="navbar  w-1/2  h-[70px] flex items-center justify-between text-black px-4  bg-[#FFFFFF]">
+      <div class="logo">
+        <a href="/index.html">
+          <img class="w-32" src="Logo/ecbc_gearo-logo.svg" alt="">
+        </a>
+      </div>
+      <div class="nav py-2 px-4 font-medium text-[18px] md:py-4 md:px-6 gap-4 hidden  lg:flex ">
+        <a class=" hover:text-[#FFB700] " href="index.html">Home</a>
+        <a class=" hover:text-[#FFB700] " href="about.html">About US</a>
+        <div class="pages  relative text-center  z-10">
+          <button class="dropbtn nav ">Page's </button>
+          <div class="pageInner absolute hidden border-[1px] border-solid   min-w-48 z-[1]">
+            <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="index.html">Home</a>
+            <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="about.html">About US</a>
+            <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="FAQg.html">FAQg</a>
+            <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="privacyPolicy.html">privacy
+              Policy</a>
+            <a class=" hover:text-[#FFB700] text-center py-2  hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="blog.html">Blog</a>
+            <a class=" hover:text-[#FFB700] text-center py-2  hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+              href="contact.html">Contact us</a>
+          </div>
+        </div>
+        <a class=" hover:text-[#FFB700] mx-2" href="/blog-page/">Blog</a>
+        <a class=" hover:text-[#FFB700] mx-2" href="contact.html">Contact us</a>
+      </div>
+
+    </div>
+    <div class="nav-right  w-1/2 h-[70px] flex gap-4 bg-white items-center justify-end text-black px-4   ">
+      <div class="pages lg:flex hidden  gap-3 relative text-center p-[10px] bg-[#F6F6F6] min-w-40 z-10">
+        <img src="/Icon/category-icon.svg" alt="">
+        <button class="dropbtn hover:block   ">All categories </button>
+        <div class="pageInner absolute  hidden bg-[#F6F6F6] -ml-[10px] mt-6 w-full z-[1]">
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Carpenter tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Painting tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Power tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Hand tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Plumbing tool</a>
+          <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+            href="#">Flathead tool</a>
+        </div>
+      </div>
+
+      <div class="nav-right-right flex ">
+        <!-- search bar -->
+        <div id="myOverlay" class="overlay  hidden">
+          <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+          <h1 class="text-5xl text-black text-center">Search Here</h1>
+          <div class="overlay-content flex flex-col items-center gap-5">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit" class="">Search</button>
+          </div>
+        </div>
+        <img src="Icon/65fe8358f0132ba5bcebf0a0_search-magnifier-dark.svg" onclick="openSearch()"
+          class="hidden md:block" alt="">
+        <img src="Icon/cart-white-icon.svg" alt="">
+
+        <!-- Add to card -->
+        <div class="card flex  py-2 px-4 gap-2 items-center bg-[#222]">
+          <i class="ri-shopping-bag-line text-xl text-white"></i>
+          <h4 class="Card-count text-xs text-center w-4 h-4 bg-white rounded-[50%] text-black">0</h4>
+        </div>
+
+         <!-- menu -->
+         <div
+         class="menu flex h-full w-full  lg:hidden items-center justify-center relative text-center z-10 ml-2 border-2 border-[#F6F6F6]">
+         <i class="ri-menu-fill menu-icon text-xl py-2 px-4 bg-[#222] text-white cursor-pointer"></i>
+         <div
+           class="menuInner hidden absolute min-w-[100vw] top-1/2 left-1/2 md:-left-1/4 -translate-x-[92%] translate-y-[13%] bg-white">
+           <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium  block"
+             href="/index.html">Home</a>
+           <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+             href="about.html">About US</a>
+           <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+             href="Shop.html">Shop</a>
+           <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+             href="FAQg.html">FAQ</a>
+           <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+             href="privacyPolicy.html">Privacy Policy</a>
+           <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+             href="blog.html">Blog</a>
+           <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+             href="contact.html">Contact</a>
+         </div>
+       </div>
+
+
+      </div>
+    </div>
+
+  </div>
+<!-- Add to card-->
+<div
+class="cardTab  hidden md:w-[400px] w-full z-30 bg-white text-black fixed flex-col justify-between right-0 top-0 bottom-0">
+
+<div class="card-title flex border-b h-14 justify-between items-center">
+  <h1 class="p-5 m-0 font-semibold text-[28px]">Your Cart</h1>
+  <i class="ri-close-fill card-close font-semibold text-[28px]"></i>
+</div>
+<div class="list-cart flex-grow overflow-auto h-[calc(100vh-160px)]">
+
+</div>
+<div class="btn absolute bottom-0 min-h-32 w-full flex items-center flex-col bg-slate-300">
+  <div class="Amt-total w-full px-5 py-4 flex items-center justify-between">
+    <h4>Subtotal</h4>
+    <h4>0</h4>
+  </div>
+  <button
+    class="checkOut text-center w-full px-5 py-4 mb-5 hover:bg-[#FFB700] transition-colors bg-black text-white hover:text-black">
+    <a href="">Continue
+      to Checkout</a></button>
+  <button
+    class="checkOut w-full px-5 py-4 hover:bg-[#FFB700] transition-colors bg-black text-white hover:text-black hidden">Checkout
+    is disabled on this site.</button>
+</div>
+</div>
+  <!-- Shop-top  -->
+  <div class="bg-zinc-800 text-white text-center flex items-center justify-center ">
+    <div class=" h-40 mx-auto px-4 text-center flex items-center relative z-[9] justify-center w-full md:h-64  bg-cover bg-center bg-opacity-55 bg-[url(/Image/hero-inner-image.jpg)]">
+      <h1 class="title text-5xl md:text-8xl text-center font-semibold">Shop</h1>
+      <div class="absolute top-0 left-0 right-0 bottom-0 bg-[#222222cc] -z-[1]" ></div>
+    </div>
+  </div>
+  
+
+<!-- product-section -->
+<div class="product-section-wraper md:w-full lg:w-full mt-24 ">
+  <div class="container h-full min-w-full  bg-white  ">
+    <div class="product-title flex justify-center items-center md:mb-5">
+      <h2 class="md:text-[48px] lg:text-[60px] text-3xl text-center justify-center font-semibold ">New arrival
+        products</h2>
+    </div>
+    <div class="contentTab md:flex-wrap md:justify-center md:items-center py-7 px-6 md:flex md:gap-6 md:px-6 md:mb-10">
+   
+  </div>
+</div>
+
+ <!-- footer -->
+ <div class="footer">
+  <!-- footer-top -->
+  <div class="  dark:bg-zinc-800  dark:text-zinc-300 py-8 px-4 md:h-[40vh] md:grid items-center">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 ">
+      <div class="flex items-center text-lg">
+
+        <img src="Logo/gearo-light-logo.svg" alt="Gear logo" class="mr-2 w-48" crossorigin="anonymous" />
+      </div>
+      <div class="flex items-baseline">
+        <img src="/Icon/location.svg" alt="Location icon" class="mr-2" crossorigin="anonymous" />
+        <div>
+          <h3 class="font-semibold text-xl">Our location</h3>
+          <p class="font-light text-base">1421 Coburn Hollow Road<br />Metamora, Center Point, IL 61548.</p>
+        </div>
+      </div>
+      <div class="flex items-baseline">
+        <img src="/Icon/email-icon.svg" alt="Email icon" class="mr-2" crossorigin="anonymous" />
+        <div>
+          <h3 class="font-semibold text-xl">Email address</h3>
+          <p class="font-light text-base">hello@gmail.com</p>
+        </div>
+      </div>
+      <div class="flex items-baseline">
+        <img src="/Icon/phone-icon.svg" alt="Phone icon" class="mr-2" crossorigin="anonymous" />
+        <div>
+          <h3 class="font-semibold text-xl">Contact number</h3>
+          <p class="font-light text-base">+124 555 666, +99 548 666</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-zinc-900 text-white py-10">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 px-4">
+      <div>
+        <h3 class="text-xl font-semibold mb-4">About us</h3>
+        <p class="text-zinc-400 text-lg font-normal md:text-left">
+          At Gearo, we embark on a relentless pursuit of excellence, driven by a passion for
+          craftsmanship and innovation. Our story is woven with a commitment to providing artisans.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Pages</h3>
+        <ul class="text-zinc-400 space-y-2">
+          <a href="/index.html">
+            <li class="hover:text-yellow-500 text-lg font-normal py-1">Home</li>
+          </a>
+          <a href="/about.html">
+            <li class="hover:text-yellow-500 text-lg font-normal py-1">About Us</li>
+          </a>
+          <a href="/Shop.html">
+            <li class="hover:text-yellow-500 text-lg font-normal py-1">Shop</li>
+          </a>
+          <a href="/FAQg.html">
+            <li class="hover:text-yellow-500 text-lg font-normal py-1">FAQs</li>
+          </a>
+          <a href="blog.html">
+            <li class="hover:text-yellow-500 text-lg font-normal py-1">Blog</li>
+          </a>
+          <a href="contact.html">
+            <li class="hover:text-yellow-500 text-lg font-normal py-1">Contact Us</li>
+          </a>
+          <a href="privacyPolicy.html">
+            <li class="hover:text-yellow-500 text-lg font-normal py-1">Privacy Policy</li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="col-span-2 lg:col-span-1">
+        <h3 class="text-xl font-semibold mb-4">Join our newsletter now</h3>
+        <div class="flex border border-zinc-700  focus:outline-none p-2">
+          <input type="email" placeholder="Enter Your Email"
+            class="p-2 w-full bg-transparent outline-none text-white " />
+          <button
+            class="hover:bg-white bg-yellow-500 focus:outline-none text-black p-2 transition ">Subscribe</button>
+        </div>
+        <h3 class="text-xl font-semibold mt-8 mb-4">Follow us on</h3>
+        <div class="flex space-x-4 text-zinc-400">
+
+          <a href="https://www.instagram.com/ashish_vishwakarm_a/"><img aria-hidden="true" class="md:w-8 lg:w-24 w-8 " alt="instagram"
+              src="/Icon/instagram.svg" /></a>
+          <a href="https://x.com/_Ashish_Snippet "><img aria-hidden="true" class="md:w-8 lg:w-24 w-8 " alt="twitter"
+              src="/Icon/twitter-x.svg" /></a>
+          <a href="https://www.linkedin.com/in/ashish-vishwakarma-7b013b266/"><img aria-hidden="true" class="md:w-8 lg:w-24 w-8 " alt="linkedin"
+              src="/Icon/linkedin.svg" /></a>
+
+          <div class="hidden lg:block">
+            <img src="/Image/footer-vector.png" alt="hammer" class="w-full h-auto" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dev-name text-center bg-zinc-800 text-white py-3">
+    <h1>Designed by <span class="text-[#FFB700]">Webflow</span> Develop by <span class="text-[#FFB700]">Ashish
+        Vishwakarma</span></h1>
+  </div>
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Script js link -->
+  <script src="/script.js"></script>
+  <script>
+    
+  </script>
+</body>
+
+</html>

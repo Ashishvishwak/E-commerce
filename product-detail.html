@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link Tailwind CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Title -->
+    <title>product-detail</title>
+    <!-- Link Favicon -->
+    <link rel="shortcut icon" href="Icon/favicon.png" type="image/x-icon">
+    <!-- Link icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Top top heard -->
+    <div
+        class="top-top-nav h-14 w-full hidden bg-[#222222] md:flex  items-center justify-between px-4 text-[18px] font-[400] font-mainFont">
+        <a href="#" class="flex gap-2">
+            <img src="Icon/gift.svg" alt="">
+            <div class="text font-mainFont text-white">Gift vouchers</div>
+        </a>
+
+        <div class="top-nav-bar-right md:flex  items-center justify-between gap-4 text-[18px] font-[400]">
+            <a href="#" class="flex gap-2">
+                <img src="Icon/phone-icon.svg" alt="">
+                <div class="text font-mainFont hover:underline hover:decoration-[#FFB700] text-white">+124 444 55</div>
+
+            </a>
+            <a href="#" class="flex gap-2">
+                <img src="Icon/email-icon.svg" alt="">
+                <div class="text font-mainFont hover:underline hover:decoration-[#FFB700] text-white">hello@gmail.com
+                </div>
+
+            </a>
+        </div>
+    </div>
+
+
+    <!-- top part of home section -->
+    <div class="home-top-part flex  ">
+        <!-- NavBar -->
+        <div class="navbar  w-1/2  h-[70px] flex items-center justify-between text-black px-4  bg-[#FFFFFF]">
+            <div class="logo">
+                <a href="/index.html">
+                    <img class="w-32" src="Logo/ecbc_gearo-logo.svg" alt="">
+                </a>
+            </div>
+            <div class="nav py-2 px-4 font-medium text-[18px] md:py-4 md:px-6 gap-4 hidden  lg:flex ">
+                <a class=" hover:text-[#FFB700] " href="index.html">Home</a>
+                <a class=" hover:text-[#FFB700] " href="about.html">About US</a>
+                <div class="pages  relative text-center  z-10">
+                    <button class="dropbtn nav ">Page's </button>
+                    <div class="pageInner absolute hidden border-[1px] border-solid   min-w-48 z-[1]">
+                        <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                            href="index.html">Home</a>
+                        <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                            href="about.html">About US</a>
+                        <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                            href="FAQg.html">FAQg</a>
+                        <a class=" hover:text-[#FFB700] text-center py-2 hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                            href="privacyPolicy.html">privacy
+                            Policy</a>
+                        <a class=" hover:text-[#FFB700] text-center py-2  hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                            href="blog.html">Blog</a>
+                        <a class=" hover:text-[#FFB700] text-center py-2  hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                            href="contact.html">Contact us</a>
+                    </div>
+                </div>
+                <a class=" hover:text-[#FFB700] mx-2" href="blog.html">Blog</a>
+                <a class=" hover:text-[#FFB700] mx-2" href="contact.html">Contact us</a>
+            </div>
+
+        </div>
+        <div class="nav-right  w-1/2 h-[70px] flex gap-4 bg-white items-center justify-end text-black px-4   ">
+            <div class="pages lg:flex hidden  gap-3 relative text-center p-[10px] bg-[#F6F6F6] min-w-40 z-10">
+                <img src="/Icon/category-icon.svg" alt="">
+                <button class="dropbtn hover:block   ">All categories </button>
+                <div class="pageInner absolute  hidden bg-[#F6F6F6] -ml-[10px] mt-6 w-full z-[1]">
+                    <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                        href="#">Carpenter tool</a>
+                    <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                        href="#">Painting tool</a>
+                    <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                        href="#">Power tool</a>
+                    <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                        href="#">Hand tool</a>
+                    <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                        href="#">Plumbing tool</a>
+                    <a class="text-center py-2 hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] block"
+                        href="#">Flathead tool</a>
+                </div>
+            </div>
+
+            <div class="nav-right-right flex ">
+                <!-- search bar -->
+                <div id="myOverlay" class="overlay  hidden">
+                    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                    <h1 class="text-5xl text-black text-center">Search Here</h1>
+                    <div class="overlay-content flex flex-col items-center gap-5">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit" class="">Search</button>
+                    </div>
+                </div>
+                <img src="/Icon/search-magnifier-dark.svg" onclick="openSearch()" class="hidden md:block" alt="">
+                <img src="Icon/cart-white-icon.svg" alt="">
+
+                <!-- Add to card -->
+                <div class="card flex  py-2 px-4 gap-2 items-center bg-[#222]">
+                    <i class="ri-shopping-bag-line text-xl text-white"></i>
+                    <h4 class="Card-count text-xs text-center w-4 h-4 bg-white rounded-[50%] text-black">0</h4>
+                </div>
+
+                <!-- menu -->
+                <div
+                    class="menu flex h-full w-full  lg:hidden items-center justify-center relative text-center z-10 ml-2 border-2 border-[#F6F6F6]">
+                    <i class="ri-menu-fill menu-icon text-xl py-2 px-4 bg-[#222] text-white cursor-pointer"></i>
+                    <div
+                        class="menuInner hidden absolute min-w-[100vw] top-1/2 left-1/2 md:-left-1/4 -translate-x-[92%] translate-y-[13%] bg-white">
+                        <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium  block"
+                            href="/index.html">Home</a>
+                        <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+                            href="about.html">About US</a>
+                        <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+                            href="Shop.html">Shop</a>
+                        <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+                            href="FAQg.html">FAQ</a>
+                        <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+                            href="privacyPolicy.html">Privacy Policy</a>
+                        <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+                            href="blog.html">Blog</a>
+                        <a class="hover:text-[#FFB700] hover:border-[1px] hover:border-solid hover:border-[#FFB700] text-left py-2 px-6 text-lg font-medium block"
+                            href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Add to card-->
+    <div
+        class="cardTab  hidden md:w-[400px] w-full z-30 bg-white text-black fixed flex-col justify-between right-0 top-0 bottom-0">
+        <div class="card-title flex border-b h-14 justify-between items-center">
+            <h1 class="p-5 m-0 font-semibold text-[28px]">Your Cart</h1>
+            <i class="ri-close-fill card-close font-semibold text-[28px]"></i>
+        </div>
+        <div class="list-items flex-grow overflow-auto h-[calc(100vh-160px)]">
+            <!-- <div class="items items-center text-center text-black w-full">
+        <div class="img w-14 h-14 object-cover object-center">
+          <img src="/Image/product-image-01-p-500.jpg" class="w-14 h-14 object-cover object-center" alt="">
+        </div>
+        <div class="info flex">
+          <span class="text-left">Lorem ipsum, dolor sit amet consectetur </span>
+        </div>
+        <div class="quantity text-center cursor-pointer">
+          <span class="inline-block bg-black w-[25px] h-[25px] rounded-full text-white text-center"> <</span>
+              <span class="text-black font-normal ">0</span>
+              <span class="inline-block bg-black w-6 h-6 rounded-full text-white text-center">></span>
+        </div>
+        <div class=""></div>
+        <div class="remove-price">
+          <h4 class="text-left font-normal">$ 1,245.00 USD</h4>
+          <h3 class="text-left font-normal hover:text-[#FFB700] underline">Remove</h3>
+        </div>
+      </div> -->
+
+        </div>
+        <div class="btn absolute bottom-0 min-h-3 2 w-full flex items-cent-col bg-slate-300">
+            <div class="Amt-total w-full px-5 py-4 flex items-center justify-between">
+                <h4>Subtotal</h4>
+                <h4>0</h4>
+            </div>
+            <button
+                class="checkOut text-center w-full px-5 py-4 mb-5 hover:bg-[#FFB700] transition-colors bg-black text-white hover:text-black">
+                <a href="">Continue
+                    to Checkout</a></button>
+            <button
+                class="checkOut w-full px-5 py-4 hover:bg-[#FFB700] transition-colors bg-black text-white hover:text-black hidden">Checkout
+                is disabled on this site.</button>
+        </div>
+    </div>
+
+    <div class="app"></div>
+    <div class="temporaryContent">
+        <div class="listProduct">
+           
+        </div>
+    </div>
+    <!-- product-detail section -->
+    <div class="container mx-auto my-6 p-4">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-4">
+                <img src="Image/product-image-15-p-500.jpg" alt="Product Image" class="w-full" />
+                <div class="flex space-x-2 mt-4">
+                    <img src="/Image/gallary-image-01.jpg" alt="Thumbnail 1" class="lg:w-36 lg:h-36  w-20 h-20" />
+                    <img src="/Image/gallary-image-02.jpg" alt="Thumbnail 2" class="lg:w-36 lg:h-36  w-20 h-20" />
+                    <img src="/Image/gallary-image-03.jpg" alt="Thumbnail 3" class="lg:w-36 lg:h-36  w-20 h-20" />
+                </div>
+            </div>
+            <div class="md:w-1/2 p-4">
+                <h1 class=" mainFont md:text-5xl text-[40px] leading-[52px] font-semibold">New tools wood cutter</h1>
+                <div class="md:text-2xl text-xl font-semibold secondFont text-[#ffb700] mt-2">
+                    $345.50 USD <span class="line-through mainFont font-medium text-base text-zinc-500">$499.00
+                        USD</span>
+                </div>
+                <p class=" subtitle mt-4 text-[#6a6a6a]">
+                    A versatile power tool used for straight cuts in wood. It's handheld and can be equipped
+                    with various blades for different materials.
+                </p>
+                <div class="mt-4">
+                    <label for="quantity" class="block text-black subtitle">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" value="1"
+                        class="w-16 p-2 border border-zinc-300 rounded mt-2" />
+                </div>
+                <button
+                    class="px-[15px] mt-4 py-[12px]  w-full text-center text-lg font-mediumbg-black  transition-colors  hover:bg-[#FFB700] hover:border-[0px] border-[1px] border-[#000] text-black">Add
+                    to
+                    Cart</button>
+
+                <div class="mt-8">
+                    <h2 class="md:text-4xl text-3xl secondFont font-semibold">Product Info</h2>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <img src="/Icon/check-icon.svg" alt="check" class="mr-2 subtitle secondFont" />Tracking and
+                            updates
+                        </li>
+                        <li class="flex items-center">
+                            <img src="/Icon/check-icon.svg" alt="check" class="mr-2 subtitle secondFont" />Delivery
+                            options
+                        </li>
+                        <li class="flex items-center">
+                            <img src="/Icon/check-icon.svg" alt="check" class="mr-2 subtitle secondFont" />Refund or
+                            exchange
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--customer care section  -->
+    <div class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div>
+                    <img src="/Icon/feature-icon-01.svg" alt="Free shipping" class="mx-auto mb-4" />
+                    <h3 class="text-2xl font-semibold text-zinc-900 ">Free shipping</h3>
+                    <p class="text-zinc-600 text-lg font-normal">
+                        Enjoy the convenience of free shipment on all your orders.
+                    </p>
+                </div>
+                <div>
+                    <img src="/Icon/feature-icon-02.svg" alt="Easy refund" class="mx-auto mb-4 text-white" />
+                    <h3 class="text-2xl font-semibold text-zinc-900 ">Easy refund</h3>
+                    <p class="text-zinc-600  text-lg font-normal">
+                        Shop with confidence that our easy refund policy has got you covered.
+                    </p>
+                </div>
+                <div>
+                    <img src="/Icon/feature-icon-03.svg" alt="Online support" class="mx-auto mb-4" />
+                    <h3 class="text-2xl font-semibold text-zinc-900 ">Online support</h3>
+                    <p class="text-zinc-600  text-lg font-normal">
+                        Our dedicated online support team is just a click away.
+                    </p>
+                </div>
+                <div>
+                    <img src="/Icon/feature-icon-04.svg" alt="Flexible payment" class="mx-auto mb-4" />
+                    <h3 class="text-2xl font-semibold text-zinc-900">Flexible payment</h3>
+                    <p class="text-zinc-600 text-lg font-normal">
+                        We understand that flexibility is key when it comes to payments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review section -->
+    <div class="max-w-4xl mx-auto p-4">
+        <h1 class="mainFont md:text-5xl text-[34px] leading-[52px] font-semibold text-center mb-2">Reviews</h1>
+        <p class=" subtitle text-center mb-4 ">
+            Read Reviews from Our Satisfied Customers. Share Your Experience with Us by clicking the below
+            button!
+        </p>
+        <div class="text-center mb-8">
+            <button
+                class="mainFont  px-[15px] py-[12px] text-center text-lg font-medium   hover:bg-[#FFB700] hover:text-black transition bg-black text-white">Submit
+                a review</button>
+        </div>
+        <div class="space-y-6">
+            <div class="bg-zinc-100 p-4  shadow">
+                <h2 class="font-semibold mainFont py-2">Frances Guerrero</h2>
+                <h3 class="font-semibold text-2xl mainFontm py-2">A must-have product</h3>
+                <div class="flex justify-start py-2">
+                    <img src="/Icon/yellow star.svg" class="w-28" alt="5 stars" />
+                </div>
+                <p class="mt-2 mb-4 subtitle">
+                    "But in certain circumstances and owing to the claims of duty or the obligations of business
+                    it will frequently occur that pleasures have to be repudiated and annoyances accepted. The
+                    wise man therefore always."
+                </p>
+            </div>
+
+            <div class="bg-zinc-100 p-4  shadow">
+                <h2 class="font-semibold mainFont py-2">Larry Lawson</h2>
+                <h3 class="font-semibold text-2xl mainFontm py-2">Amazing...loved it</h3>
+                <div class="flex justify-start py-2">
+                    <img src="/Icon/yellow star.svg" class="w-28" alt="5 stars" />
+                </div>
+                <p class="mt-2 mb-4 subtitle">
+                    "It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
+                    structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
+                    therefore always free from repetition, injected humour, or non-characteristic words, etc."
+                </p>
+
+            </div>
+            <div class="bg-zinc-100 p-4  shadow">
+                <h2 class="font-semibold mainFont py-2 ">Lori Stevens</h2>
+                <h3 class="font-semibold text-2xl mainFontm py-2">Highly recommended!</h3>
+                <div class="flex justify-start py-2">
+                    <img src="/Icon/yellow star.svg" class="w-28" alt="5 stars" />
+                </div>
+                <p class="mt-2 mb-4 subtitle">
+                    "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                    interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are
+                    also reproduced in their exact original form."
+                </p>
+
+            </div>
+            <div class="bg-zinc-100 p-4  shadow">
+                <h2 class="font-semibold mainFont py-2">Bryan Knight</h2>
+                <h3 class="font-semibold text-2xl mainFontm py-2">Wonderful Product</h3>
+                <div class="flex justify-start py-2">
+                    <img src="/Icon/yellow star.svg" class="w-28" alt="5 stars" />
+                </div>
+                <p class="mt-2 mb-4 subtitle">
+                    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+                    of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+                    a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure."
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent products section -->
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-semibold mainFont text-center mb-8">Recent products</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
+           
+           
+                <div class="item-box md:w-[289px] md:h-[289px] flex mb-12 flex-col relative group">
+                    <div class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                      <button class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black">
+                        <a class="addCart"  href="#">Add to cart</a>
+                      </button>
+                    </div>
+                    <img class="h-full w-full object-cover object-center" src="/Image/product-image-01-p-500.jpg" alt="">
+                    <h3 class="text-xl font-semibold text-left">Electric rotary drill machine</h3>
+                    <h4 class="text-lg font-medium text-left">$750.00 USD
+               
+                      <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a]">$900.00
+                        USD</samp>
+                    </h4>
+                  </div>
+                <div class="item-box md:w-[289px] md:h-[289px] flex mb-12 flex-col relative group">
+                    <div
+                        class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                        <button
+                            class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black">
+                            <a class="addCart mainFont " href="#">Shop Now</a>
+                        </button>
+                    </div>
+                    <img class="h-full w-full object-cover object-center" src="/Image/product-image-02-p-500.jpg" alt="">
+                    <h3 class="text-xl font-semibold text-left mainFont">Electric rotary drill machine</h3>
+                    <h4 class="text-lg font-medium text-left mainFont">$750.00 USD
+    
+                        <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a] mainFont">$900.00
+                            USD</samp>
+                    </h4>
+                </div>
+    
+                <div class="item-box md:w-[289px] md:h-[289px] flex mb-12 flex-col relative group">
+                    <div
+                        class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                        <button
+                            class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black">
+                            <a class="addCart mainFont " href="#">Shop Now</a>
+                        </button>
+                    </div>
+                    <img class="h-full w-full object-cover object-center" src="/Image/product-image-03-p-500.jpg" alt="">
+                    <h3 class="text-xl font-semibold text-left mainFont">Ingco power tools</h3>
+                    <h4 class="text-lg font-medium text-left mainFont">$1,245.00 USD
+    
+                        <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a] mainFont">$1,420.00
+                            USD</samp>
+                    </h4>
+                </div>
+    
+                <div class="item-box md:w-[289px] md:h-[289px] flex mb-12 flex-col relative group">
+                    <div
+                        class="absolute inset-0 bg-slate-100 bg-opacity-0 opacity-0 group-hover:bg-opacity-75 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                        <button
+                            class="px-[15px] w-36 py-[12px] text-center text-lg font-medium hover:bg-black hover:text-white transition bg-[#FFB700] text-black">
+                            <a class="addCart mainFont " href="#">Shop Now</a>
+                        </button>
+                    </div>
+                    <img class="h-full w-full object-cover object-center" src="/Image/product-image-04-p-500.jpg" alt="">
+                    <h3 class="text-xl font-semibold text-left mainFont">7-in-1 magnetized wrench</h3>
+                    <h4 class="text-lg font-medium text-left mainFont">$248.00 USD
+    
+                        <samp class="line-through md:inline block text-base font-normal text-[#6a6a6a] mainFont">$420.00
+                            USD</samp>
+                    </h4>
+                </div>
+            
+
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <!-- footer-top -->
+        <div class="  dark:bg-zinc-800  dark:text-zinc-300 py-8 px-4 md:h-[40vh] md:grid items-center">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 ">
+                <div class="flex items-center text-lg">
+
+                    <img src="Logo/gearo-light-logo.svg" alt="Gear logo" class="mr-2 w-48" crossorigin="anonymous" />
+                </div>
+                <div class="flex items-baseline">
+                    <img src="/Icon/location.svg" alt="Location icon" class="mr-2" crossorigin="anonymous" />
+                    <div>
+                        <h3 class="font-semibold text-xl">Our location</h3>
+                        <p class="font-light text-base">1421 Coburn Hollow Road<br />Metamora, Center Point, IL 61548.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-baseline">
+                    <img src="/Icon/email-icon.svg" alt="Email icon" class="mr-2" crossorigin="anonymous" />
+                    <div>
+                        <h3 class="font-semibold text-xl">Email address</h3>
+                        <p class="font-light text-base">hello@gmail.com</p>
+                    </div>
+                </div>
+                <div class="flex items-baseline">
+                    <img src="/Icon/phone-icon.svg" alt="Phone icon" class="mr-2" crossorigin="anonymous" />
+                    <div>
+                        <h3 class="font-semibold text-xl">Contact number</h3>
+                        <p class="font-light text-base">+124 555 666, +99 548 666</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-zinc-900 text-white py-10">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 px-4">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">About us</h3>
+                    <p class="text-zinc-400 text-lg font-normal md:text-left">
+                        At Gearo, we embark on a relentless pursuit of excellence, driven by a passion for
+                        craftsmanship and innovation. Our story is woven with a commitment to providing artisans.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Pages</h3>
+                    <ul class="text-zinc-400 space-y-2">
+                        <a href="/index.html">
+                            <li class="hover:text-yellow-500 text-lg font-normal py-1">Home</li>
+                        </a>
+                        <a href="/about.html">
+                            <li class="hover:text-yellow-500 text-lg font-normal py-1">About Us</li>
+                        </a>
+                        <a href="/Shop.html">
+                            <li class="hover:text-yellow-500 text-lg font-normal py-1">Shop</li>
+                        </a>
+                        <a href="/FAQg.html">
+                            <li class="hover:text-yellow-500 text-lg font-normal py-1">FAQs</li>
+                        </a>
+                        <a href="blog.html">
+                            <li class="hover:text-yellow-500 text-lg font-normal py-1">Blog</li>
+                        </a>
+                        <a href="contact.html">
+                            <li class="hover:text-yellow-500 text-lg font-normal py-1">Contact Us</li>
+                        </a>
+                        <a href="privacyPolicy.html">
+                            <li class="hover:text-yellow-500 text-lg font-normal py-1">Privacy Policy</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-semibold mb-4">Join our newsletter now</h3>
+                    <div class="flex border border-zinc-700  focus:outline-none p-2">
+                        <input type="email" placeholder="Enter Your Email"
+                            class="p-2 w-full bg-transparent outline-none text-white " />
+                        <button
+                            class="hover:bg-white bg-yellow-500 focus:outline-none text-black p-2 transition ">Subscribe</button>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-8 mb-4">Follow us on</h3>
+                    <div class="flex space-x-4 text-zinc-400">
+
+                        <a href="https://www.instagram.com/ashish_vishwakarm_a/"><img aria-hidden="true"
+                                class="md:w-8 lg:w-24 w-8 " alt="instagram" src="/Icon/instagram.svg" /></a>
+                        <a href="https://x.com/_Ashish_Snippet "><img aria-hidden="true" class="md:w-8 lg:w-24 w-8 "
+                                alt="twitter" src="/Icon/twitter-x.svg" /></a>
+                        <a href="https://www.linkedin.com/in/ashish-vishwakarma-7b013b266/"><img aria-hidden="true"
+                                class="md:w-8 lg:w-24 w-8 " alt="linkedin" src="/Icon/linkedin.svg" /></a>
+
+                        <div class="hidden lg:block">
+                            <img src="/Image/footer-vector.png" alt="hammer" class="w-full h-auto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dev-name text-center bg-zinc-800 text-white py-3">
+            <h1>Designed by <span class="text-[#FFB700]">Webflow</span> Develop by <span class="text-[#FFB700]">Ashish
+                    Vishwakarma</span></h1>
+        </div>
+    </div>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Script js link -->
+    <!-- <script src="/script.js"></script> -->
+
+    <script>
+        // it is for menu
+
+        function menu() {
+            let menu = document.querySelector(".menu");
+            let menuIcon = document.querySelector(".menu-icon");
+            let menuInner = document.querySelector(".menuInner");
+
+            menu.addEventListener("click", () => {
+                menuInner.classList.toggle("hidden");
+                menuIcon.classList.toggle("ri-close-fill");
+                menuIcon.classList.toggle("ri-menu-fill");
+            });
+        }
+
+
+        menu();
+    </script>
+</body>
+
+</html>
